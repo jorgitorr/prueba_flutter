@@ -17,38 +17,36 @@ class MyApp extends StatelessWidget {
             title: const Text('Material App Bar'),
             backgroundColor: Colors.red,
           ),
-          body: //const MyBody()
-              Center(
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 250,
-                  width: 250,
-                  child: Image.asset('assets/hollow-knight.webp'),
-                ),
-                SizedBox(
-                  height: 250,
-                  width: 250,
-                  child: Image.network(
-                      'https://cdn.pixabay.com/photo/2020/12/14/15/46/touch-5831241_640.jpg'),
-                )
-              ],
-            ),
+          body: Profile(),
+          bottomNavigationBar: Footer()),
+    );
+  }
+}
+
+class Profile extends StatelessWidget {
+  const Profile({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 100,
+            backgroundImage: AssetImage('assets/hollow-knight.webp'),
           ),
-          bottomNavigationBar: NavigationBar(
-            destinations: const [
-              NavigationDestination(
-                icon: Icon(Icons.home_outlined),
-                label: "Home",
-                selectedIcon: Icon(Icons.home),
-              ),
-              NavigationDestination(
-                icon: Icon(Icons.person_2_outlined),
-                label: "Profile",
-                selectedIcon: Icon(Icons.person),
+          Column(
+            children: [
+              Text(
+                "Paco",
+                style: TextStyle(fontSize: 20),
               )
             ],
-          )),
+          )
+        ],
+      ),
     );
   }
 }
