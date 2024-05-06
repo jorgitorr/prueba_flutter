@@ -15,9 +15,15 @@ class Footer extends StatelessWidget {
           selectedIcon: Icon(Icons.home),
         ),
         NavigationDestination(
-          icon: Icon(Icons.person_2_outlined),
-          label: "Profile",
-          selectedIcon: Icon(Icons.person),
+            icon: Icon(Icons.person_2_outlined),
+            label: "Profile",
+            selectedIcon: Icon(Icons.person)),
+        NavigationDestination(
+          icon: Badge(
+            label: Text('2'),
+            child: Icon(Icons.messenger_outline_sharp),
+          ),
+          label: "Messages",
         )
       ],
     );
