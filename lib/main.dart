@@ -14,13 +14,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, //quita lo de debug
       routes: {
         '/homepage': (context) => const Home(),
+        '/profilepage': (context) => const Profile()
       },
       home: Scaffold(
           appBar: AppBar(
             title: const Text('Material App Bar'),
             backgroundColor: Colors.red,
           ),
-          body: Profile(),
+          body: const Profile(),
           bottomNavigationBar: const Footer()),
     );
   }

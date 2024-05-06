@@ -10,19 +10,16 @@ class Footer extends StatelessWidget {
     return NavigationBar(
       destinations: const [
         NavigationDestination(
-          icon: Icon(Icons.home_outlined),
-          label: "Home",
-          selectedIcon: Icon(Icons.home),
-        ),
+            icon: Icon(Icons.home_outlined),
+            label: "Home",
+            selectedIcon: Icon(Icons.home)),
         NavigationDestination(
             icon: Icon(Icons.person_2_outlined),
             label: "Profile",
             selectedIcon: Icon(Icons.person)),
         NavigationDestination(
           icon: Badge(
-            label: Text('2'),
-            child: Icon(Icons.messenger_outline_sharp),
-          ),
+              label: Text('2'), child: Icon(Icons.messenger_outline_sharp)),
           label: "Messages",
         )
       ],
